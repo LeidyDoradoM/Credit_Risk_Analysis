@@ -4,30 +4,35 @@ In this week's project we will apply machine learning algorithms to solve a cred
 
 ## Resampling Models to Predict Credit Risk
 
-As it was established, an imbalanced dataset is a dataset where each output class is represented by different number of input samples. It is necessary to make a process for balancing the number of samples of the different classes. 
-Three machine learning models, oversampling-`RandomOverSampler` and `SMOTE` ;
-undersampling - `ClusterCentroids`.
+An imbalanced dataset is a dataset where each output class is represented by different number of input samples. In these cases is necessary to make a process for balancing the number of samples before classifying the dataset. Here, we are going to test four sampling models: Two oversampling methods: `RandomOverSampler` and `SMOTE`, one undersampling method: `ClusterCentroids`, and `SMOTEENN` that is a mixture between overversampling and undersampling.
 
-### Oversampling Algorithms: Random Oversampler and SMOTE:
+The sampling and classification code in *Python* are shown [here](https://raw.githubusercontent.com/LeidyDoradoM/Credit_Risk_Analysis/main/credit_risk_resampling.ipynb) and the comparison between the sampling models is performed based on three classification metrics:  **Accuracy**, **Confusion Matrix** and **Precision/Recall**. For all four cases, the same classifier: **Logistic Regression** is used.
+
+### Oversampling Algorithm: Random Oversampler:
+
+
 
 ![random](https://raw.githubusercontent.com/LeidyDoradoM/Credit_Risk_Analysis/main/Images/RandomSampling.png) 
 
+## Oversampling Algorithm: SMOTE Algorithm:
+
+![smote](https://raw.githubusercontent.com/LeidyDoradoM/Credit_Risk_Analysis/main/Images/SMOTESampling.png)
+
 ### Undersampling Algorithm: Cluster Centroids:
 
-![random](https://raw.githubusercontent.com/LeidyDoradoM/Credit_Risk_Analysis/main/Images/SMOTESampling.png)
+![cluster](https://raw.githubusercontent.com/LeidyDoradoM/Credit_Risk_Analysis/main/Images/ClusterCentroid.png)
 
-## SMOTEENN Algorithm to Predict Credit Risk
-
-![random](https://raw.githubusercontent.com/LeidyDoradoM/Credit_Risk_Analysis/main/Images/ClusterCentroid.png)
-
-### Over and Under sampling Algorithm: SMOTEEN:
-![random](https://raw.githubusercontent.com/LeidyDoradoM/Credit_Risk_Analysis/main/Images/SMOTEENNSampling.png)
+### Over and Under sampling Algorithm: SMOTEENN:
+![smoteen](https://raw.githubusercontent.com/LeidyDoradoM/Credit_Risk_Analysis/main/Images/SMOTEENNSampling.png)
 
 ## Ensemble Classifiers to Predict Credit Risk
 
-### Balance Random Forest Classifier:
+In addition to the sampling and classification approach, we test two ensemble classifiers that resample the dataset and calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report. The code can be found in [here](https://raw.githubusercontent.com/LeidyDoradoM/Credit_Risk_Analysis/main/credit_risk_ensambling.ipynb).
 
+### Balance Random Forest Classifier:
+![forest](https://raw.githubusercontent.com/LeidyDoradoM/Credit_Risk_Analysis/main/Images/RandomForest.png)
 ### Easy Ensemble Classifier:
+![adaboost](https://raw.githubusercontent.com/LeidyDoradoM/Credit_Risk_Analysis/main/Images/AdaBoost.png)
 
 ## Sumary
 
